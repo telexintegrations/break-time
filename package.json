@@ -1,0 +1,28 @@
+{
+	"name": "break-time",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./src/app.ts",
+	"scripts": {
+		"build": "npx tsc",
+		"start": "node dist/index.js",
+		"dev": "nodemon ./src/app.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"@types/node": "^22.13.5",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.7.3"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
+		"http-status-codes": "^2.3.0",
+		"nodemon": "^3.1.9"
+	}
+}
