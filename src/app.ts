@@ -18,6 +18,10 @@ app.get('/', (_, res: Response) => {
 	});
 });
 
-app.listen(port, () =>
-	console.log(`Server running successfully on port: ${port}`)
-);
+if (process.env.NODE_ENV !== 'test') {
+	app.listen(port, () =>
+		console.log(`Server running successfully on port: ${port}`)
+	);
+}
+
+export default app;
