@@ -28,7 +28,7 @@ export const integrationController = async (
 			integration_type: 'interval',
 			integration_category: 'Human Resources & Payroll',
 			key_features: ['break', 'quotes'],
-			author: 'PeePee',
+			author: 'Paul Ajijola',
 			settings: [
 				{
 					label: 'interval',
@@ -44,7 +44,7 @@ export const integrationController = async (
 					default: '',
 				},
 			],
-			target_url: 'none',
+			target_url: '',
 			tick_url: `${baseUrl}/break`,
 		},
 	});
