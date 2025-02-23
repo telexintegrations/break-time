@@ -197,4 +197,7 @@ break-time/
 MIT
 
 ### Quotes 
-The random quotes sent are gotten from `http://api.quotable.io/quotes/random` which
+The random quotes sent are gotten from `http://api.quotable.io/quotes/random`.
+
+### Image showing integration
+[Telex Chat showing BreakTime integration](https://res.cloudinary.com/dl5nzkcs4/image/upload/yranmd4bpqykthumt75y.jpg)
