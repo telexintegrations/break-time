@@ -12,10 +12,10 @@ const config: Config.InitialOptions = {
 	},
 	moduleDirectories: ['node_modules', 'src'],
 	transform: {
-		'^.+\\.ts$': [
+		'^.+\\.tsx?$': [
 			'ts-jest',
 			{
-				tsconfig: 'tsconfig.json',
+				tsconfig: 'tsconfig.test.json',
 			},
 		],
 	},
