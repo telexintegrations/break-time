@@ -5,6 +5,7 @@
 	"main": "dist/src/app.js",
 	"scripts": {
 		"build": "npx tsc",
+   "build-all": "pnpm install && pnpm run build",
 		"start": "node dist/src/app.js",
 		"dev": "nodemon ./src/app.ts",
 		"test:watch": "jest --watch",
