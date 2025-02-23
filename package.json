@@ -2,10 +2,10 @@
 	"name": "break-time",
 	"version": "1.0.0",
 	"description": "",
-	"main": "dist/src/app.js",
+	"main": "./src/app.js",
 	"scripts": {
 		"build": "npx tsc",
-		"start": "node dist/src/app.js",
+		"start": "node ./src/app.js",
 		"dev": "nodemon ./src/app.ts",
 		"test:watch": "jest --watch",
 		"test": "jest --detectOpenHandles",
