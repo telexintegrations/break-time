@@ -19,14 +19,15 @@ export const integrationController = async (
 			descriptions: {
 				app_name: 'Break Time',
 				app_description: 'Break TIme',
-				app_logo: 'http://127.0.0.1/api/v1/relax',
+				app_logo:
+					'https://as1.ftcdn.net/jpg/02/00/33/96/240_F_200339666_fZhsLAgpYkd5ogjTpFmSYOPcslpNezYA.jpg',
 				app_url: `${baseUrl}`,
 				background_color: '#fff',
 			},
 			is_active: true,
 			integration_type: 'interval',
 			integration_category: 'Human Resources & Payroll',
-			key_features: ['break'],
+			key_features: ['break', 'quotes'],
 			author: 'PeePee',
 			settings: [
 				{
@@ -44,7 +45,7 @@ export const integrationController = async (
 				},
 			],
 			target_url: 'none',
-			tick_url: `${baseUrl}/tick`,
+			tick_url: `${baseUrl}/break`,
 		},
 	});
 };
@@ -54,14 +55,10 @@ export const tickController = async (
 	res: Response
 ): Promise<void> => {
 	try {
-		const { return_url, settings }: Payload = req.body;
+		const { settings }: Payload = req.body;
 
-		if (!return_url) {
-			res.status(StatusCodes.BAD_REQUEST).json({
-				status: 'error',
-				message: 'return_url is required',
-			});
-			return;
+		if (!process.env.TELEX_URL) {
+			throw new Error('TELEX_URL environment variable should be set');
 		}
 
 		const quote: Quote = await getQuote();
@@ -77,8 +74,8 @@ export const tickController = async (
 			event_name: eventName(),
 			status: 'success',
 		};
-		console.log(data);
-		await axios.post(return_url, data, {
+
+		await axios.post(process.env.TELEX_URL, data, {
 			headers: {
 				'Content-Type': 'application/json',
 			},

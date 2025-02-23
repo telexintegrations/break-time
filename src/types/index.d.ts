@@ -6,7 +6,6 @@ export interface Settings {
 }
 
 export interface Payload {
-	return_url: string;
 	settings: Settings;
 }
 
