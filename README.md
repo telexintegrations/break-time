@@ -122,6 +122,7 @@ pnpm run dev # console log message Server successfully running on port: 3000
 -   POST `/break`
     -   Triggers a break notification with a random quote
     -   Requires settings in the request body
+    -   This is required to set the event name e.g., what is set in `default` becomes the `event_name`
 
 #### Request Body Example
 
