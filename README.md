@@ -1,6 +1,6 @@
 # Break Time
 
-This showcases an Integration with Telex that sends break time notifications with random quotes to keep users motivated and productive. It uses a Interval Type of integration.
+This showcases an Integration with Telex that sends break time notifications with random quotes to keep users motivated and productive. It uses a Interval Type of integration. The BreakTime reminder is sent every hour. This can be changed by changing the interval.
 
 ## Table of Contents
 
@@ -152,6 +152,9 @@ pnpm run test:watch
 
 ## Project Structure
 
+The app folder structure
+
+```
 break-time/
 ├── src/
 │ ├── controller/
@@ -176,7 +179,7 @@ break-time/
 └── pnpm-lock.yaml
 └── README.md
 ├── tsconfig.json
-
+```
 ### Technologies Used
 
 -   Express.js
@@ -191,3 +194,6 @@ break-time/
 ### License
 
 MIT
+
+### Quotes 
+The random quotes sent are gotten from `http://api.quotable.io/quotes/random` which
