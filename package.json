@@ -2,15 +2,14 @@
 	"name": "break-time",
 	"version": "1.0.0",
 	"description": "",
-	"main": "/ist/src/app.js",
+	"main": "dist/src/app.js",
 	"scripts": {
 		"build": "npx tsc",
 		"start": "node dist/src/app.js",
 		"dev": "nodemon ./src/app.ts",
 		"test:watch": "jest --watch",
 		"test": "jest --detectOpenHandles",
-		"test:coverage": "jest --coverage",
-		"test:types": "tsd --file src/types/**/*.d.ts"
+		"test:coverage": "jest --coverage"
 	},
 	"keywords": [],
 	"author": "",
