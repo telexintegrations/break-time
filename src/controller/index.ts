@@ -64,7 +64,7 @@ export const tickController = async (
 		const quote: Quote = await getQuote();
 
 		const eventName = (): string => {
-			if (settings.label === 'header') return settings.default;
+			if (settings.label.toLowerCase() === 'header') return settings.default;
 			return 'Take Break';
 		};
 
