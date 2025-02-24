@@ -201,3 +201,23 @@ The random quotes sent are gotten from `http://api.quotable.io/quotes/random`.
 
 ### Image showing integration
 [Telex Chat showing BreakTime integration](https://res.cloudinary.com/dl5nzkcs4/image/upload/yranmd4bpqykthumt75y.jpg)
+
+### To test the integration: using `curl`
+
+```bash
+curl -X POST \
+  "https://telex-break.onrender.com/break" \
+  -H "accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "settings": {
+      "label": "header",
+      "type": "text",
+      "required": true,
+      "default": "🙂🙂 Dey Rest 🙂🙂"
+    }
+  }'
+```
+
+Telex-Organization: Telex-Integration-Test-4 Organization
+Channel Name: break-time
