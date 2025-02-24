@@ -18,7 +18,7 @@ export const integrationController = async (
 			},
 			descriptions: {
 				app_name: 'Break Time',
-				app_description: 'Break TIme',
+				app_description: 'Break Time reminds everyone on the team to take a break at a set time. it also sends random quotes to the team for motivation alongside the reminder.',
 				app_logo:
 					'https://as1.ftcdn.net/jpg/02/00/33/96/240_F_200339666_fZhsLAgpYkd5ogjTpFmSYOPcslpNezYA.jpg',
 				app_url: `${baseUrl}`,
